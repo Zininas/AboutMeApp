@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A119278B2B1B67F10037D5AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119278A2B1B67F10037D5AD /* User.swift */; };
+		A119278D2B1B7FB80037D5AD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119278C2B1B7FB80037D5AD /* TabBarViewController.swift */; };
+		A119278F2B1B85030037D5AD /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119278E2B1B85030037D5AD /* PersonViewController.swift */; };
+		A11927912B1B986A0037D5AD /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11927902B1B986A0037D5AD /* AboutMeViewController.swift */; };
 		A1319ABA2B15E37C0055FD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1319AB92B15E37C0055FD1B /* AppDelegate.swift */; };
 		A1319ABC2B15E37C0055FD1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1319ABB2B15E37C0055FD1B /* SceneDelegate.swift */; };
 		A1319ABE2B15E37C0055FD1B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1319ABD2B15E37C0055FD1B /* LoginViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A119278A2B1B67F10037D5AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A119278C2B1B7FB80037D5AD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A119278E2B1B85030037D5AD /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		A11927902B1B986A0037D5AD /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		A1319AB62B15E37C0055FD1B /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1319AB92B15E37C0055FD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1319ABB2B15E37C0055FD1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A11927852B1B363F0037D5AD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1319AB92B15E37C0055FD1B /* AppDelegate.swift */,
+				A1319ABB2B15E37C0055FD1B /* SceneDelegate.swift */,
+				A1319AC72B15E37D0055FD1B /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A11927862B1B5B370037D5AD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A119278C2B1B7FB80037D5AD /* TabBarViewController.swift */,
+				A1319ABD2B15E37C0055FD1B /* LoginViewController.swift */,
+				A1319ACD2B160E2E0055FD1B /* WelcomeViewController.swift */,
+				A119278E2B1B85030037D5AD /* PersonViewController.swift */,
+				A11927902B1B986A0037D5AD /* AboutMeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A11927872B1B5B9B0037D5AD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A1319ABF2B15E37C0055FD1B /* Main.storyboard */,
+				A1319AC42B15E37D0055FD1B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A11927892B1B5C760037D5AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A119278A2B1B67F10037D5AD /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A1319AAD2B15E37C0055FD1B = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +105,11 @@
 		A1319AB82B15E37C0055FD1B /* AboutMeApp */ = {
 			isa = PBXGroup;
 			children = (
-				A1319AB92B15E37C0055FD1B /* AppDelegate.swift */,
-				A1319ABB2B15E37C0055FD1B /* SceneDelegate.swift */,
-				A1319ABD2B15E37C0055FD1B /* LoginViewController.swift */,
-				A1319ACD2B160E2E0055FD1B /* WelcomeViewController.swift */,
-				A1319ABF2B15E37C0055FD1B /* Main.storyboard */,
+				A11927862B1B5B370037D5AD /* ViewControllers */,
+				A11927892B1B5C760037D5AD /* Models */,
+				A11927872B1B5B9B0037D5AD /* Storyboards */,
+				A11927852B1B363F0037D5AD /* App */,
 				A1319AC22B15E37D0055FD1B /* Assets.xcassets */,
-				A1319AC42B15E37D0055FD1B /* LaunchScreen.storyboard */,
-				A1319AC72B15E37D0055FD1B /* Info.plist */,
 			);
 			path = AboutMeApp;
 			sourceTree = "<group>";
@@ -143,8 +187,12 @@
 			files = (
 				A1319ABE2B15E37C0055FD1B /* LoginViewController.swift in Sources */,
 				A1319ACE2B160E2E0055FD1B /* WelcomeViewController.swift in Sources */,
+				A11927912B1B986A0037D5AD /* AboutMeViewController.swift in Sources */,
 				A1319ABA2B15E37C0055FD1B /* AppDelegate.swift in Sources */,
+				A119278B2B1B67F10037D5AD /* User.swift in Sources */,
+				A119278D2B1B7FB80037D5AD /* TabBarViewController.swift in Sources */,
 				A1319ABC2B15E37C0055FD1B /* SceneDelegate.swift in Sources */,
+				A119278F2B1B85030037D5AD /* PersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4LMQ5UXFMM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMeApp/Info.plist;
+				INFOPLIST_FILE = AboutMeApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -329,7 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4LMQ5UXFMM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMeApp/Info.plist;
+				INFOPLIST_FILE = AboutMeApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
