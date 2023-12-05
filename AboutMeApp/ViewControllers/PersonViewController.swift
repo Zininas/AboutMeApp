@@ -11,35 +11,30 @@ final class PersonViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surenameLabel: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var professionLabel: UILabel!
+    
+    var user: User!
     
     var name: String!
     var surename: String!
+    var foto: String!
     var age: Int!
     var profession: String!
     
-    private let primaryColor = UIColor(
-        red: 225/255,
-        green: 150/255,
-        blue: 185/255,
-        alpha: 1
-    )
-    
-    private let secondaryColor = UIColor(
-        red: 115/255,
-        green: 150/255,
-        blue: 225/255,
-        alpha: 1
-    )
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        nameLabel.text = name
-        surenameLabel.text = surename
-        ageLabel.text = String(format: "Age: \(age ?? 0)", age)
-        professionLabel.text = profession
+        view.addVerticalGradientLayer()
+        title = user.person.fullName
+        nameLabel.text = user.person.name
+        surenameLabel.text = user.person.surName
+        photoImage.image = UIImage(named: "zinin")
+        professionLabel.text = user.person.profession
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let aboutMeVC = segue.destination as? AboutMeViewController else { return }
+        aboutMeVC.user = user
     }
 }
 

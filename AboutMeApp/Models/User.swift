@@ -8,26 +8,35 @@
 struct User {
     let userName: String
     let password: String
+    let person: Person
     
     static func getUser() -> User {
-        User(userName: "Alexey", password: "123")
+        User(
+            userName: "Alexey",
+            password: "123",
+            person: Person.getPerson()
+        )
     }
 }
 
 struct Person {
     let name: String
     let surName: String
-    let age: Int
+    let foto: String
     let profession: String
     let biografy: String
+    
+    var fullName: String {
+        "\(name) \(surName)"
+    }
     
     static func getPerson() -> Person {
         Person(
             name: "Aleksandr",
-            surName: "Zinin",
-            age: 38,
+            surName: "Zinin", 
+            foto: "zinin",
             profession: "IOS Developer",
-            biografy: "Здесь должна быть интересная история об интересном человеке!"
+            biografy: "На данный момент получаю новую и востребованную специальность - IOS Разработчик в SwiftBook!"
         )
     }
 }

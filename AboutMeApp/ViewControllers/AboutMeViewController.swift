@@ -11,25 +11,14 @@ final class AboutMeViewController: UIViewController {
 
     @IBOutlet weak var aboutMeTextView: UITextView!
     
-    var aboutMe: String!
-    
-    private let primaryColor = UIColor(
-        red: 225/255,
-        green: 150/255,
-        blue: 185/255,
-        alpha: 1
-    )
-    
-    private let secondaryColor = UIColor(
-        red: 115/255,
-        green: 150/255,
-        blue: 225/255,
-        alpha: 1
-    )
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        aboutMeTextView.text = aboutMe
+        view.addVerticalGradientLayer()
+        title = "\(user.person.fullName) Bio"
+        aboutMeTextView.backgroundColor = .clear
+        aboutMeTextView.textColor = .white
+        aboutMeTextView.text = user.person.biografy
     }
 }

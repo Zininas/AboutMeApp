@@ -13,27 +13,15 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     private let user = User.getUser()
-    private let person = Person.getPerson()
 
     override func viewDidLoad() {
         userNameTextField.text = user.userName
         passwordTextField.text = user.password
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarVC = segue.destination as? UITabBarController
-        
-        tabBarVC?.viewControllers?.forEach{ viewcontroller in
-            if let welcomeVC = viewcontroller as? WelcomeViewController {
-                welcomeVC.welcome = "Welcome, \(user.userName)!"
-                welcomeVC.myName = "My name is \(person.name)!"
-            } else if let navigationVC = viewcontroller as? UINavigationController {
-                let personVC = navigationVC.topViewController as? PersonViewController
-                personVC?.name = "Name: \(person.name)"
-                personVC?.surename = "Surename: \(person.surName)"
-                personVC?.age = person.age
-                personVC?.profession = "Profession: \(person.profession)"
-            } 
-        }
+        guard let tabBarVC = segue.destination as? TabBarViewController else { return }
+        tabBarVC.user = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
